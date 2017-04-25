@@ -80,6 +80,22 @@ public class BeersController {
 
     @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> createBeer(@RequestBody Map<String, Object> beerData) {
+// Sample data for insert on POSTMAN.
+// PUT with raw option, and "application/json".
+//        {
+//            "abv": 5.7,
+//                "name": "Tony's Newer variety of Piranha Pale Ale",
+//                "upc": 0,
+//                "description": "",
+//                "style": "American-Style Pale Ale",
+//                "brewery_id": "110f04166d",
+//                "type": "beer",
+//                "category": "North American Ale",
+//                "ibu": 0,
+//                "updated": "2010-07-22 20:00:20",
+//                "srm": 0
+//        }
+
         String id = "";
         try {
             JsonObject beer = parseBeer(beerData);
